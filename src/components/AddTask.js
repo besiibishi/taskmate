@@ -7,7 +7,7 @@ const AddTask = ({taskList, setTaskList, task, setTask}) => {
 
     //ne if jemi per me editu update ne else direkt me e shtu taskun tone.
     if(task.id){
-        const date = new Date;
+        const date = new Date();
         const updatedTaskList = taskList.map((todo)=> (
             todo.id === task.id ? {id: task.id, name: task.name, time:`${date.toLocaleTimeString()} ${date.toLocaleDateString()}`} : todo
         ));
